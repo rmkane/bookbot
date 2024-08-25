@@ -2,6 +2,11 @@
 
 # A script to download Frankenstein from <https://github.com/asweigart/codebreaker>
 
+# TODO
+# Original book: https://www.gutenberg.org/ebooks/84
+# Text: https://www.gutenberg.org/cache/epub/84/pg84.txt
+
+
 book_repo=https://raw.githubusercontent.com/asweigart/codebreaker
 books=("frankenstein.txt")
 
