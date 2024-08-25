@@ -2,12 +2,22 @@
 
 
 def main():
-    book_path = "books/frankenstein.txt"
+    generate_report("books/frankenstein.txt")
+
+
+def generate_report(book_path):
     text = get_book_text(book_path)
     word_count = count_words(text)
     char_map = character_count(text)
-    print(word_count)
-    print(char_map)
+
+    print(f"--- Begin report of {book_path} ---")
+    print(f"{word_count} words found in the document\n")
+
+    for ch, count in sorted(char_map.items(), key=lambda x: x[1], reverse=True):
+        if ch.isalpha():
+            print(f"The '{ch}' character was found {count} times")
+
+    print(f"--- End of report ---")
 
 
 def get_book_text(path):
